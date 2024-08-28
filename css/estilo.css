@@ -1,0 +1,713 @@
+/* Geral */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border: 0;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Cor de fundo */
+
+body {
+    background-color: #F8EDE3;
+}
+
+/* caixa navegação */
+
+.navbar-container {
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #D0B8A8;
+    padding: 0 2em;
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* Icone Pesquisa  */
+
+.container-search {
+    position: absolute;
+    right: 370px;
+    top: 25px;
+    transform: translate(0%);
+}
+
+.search-box {
+    input[type="text"] {
+        border: none;
+        background: none;
+        z-index: 1;
+        width: 25px;
+        height: 25px;
+        transition: all .25s ease-in .25s;
+        color: transparent;
+        font-size: .75rem;
+        line-height: 25px;
+        right: 26%;
+
+        &:hover {
+            cursor: pointer;
+
+            &:focus {
+                cursor: text;
+            }
+
+            +span {
+                background: rgba(255, 255, 255, 0.2);
+            }
+        }
+
+        &:focus {
+            width: 200px;
+            padding: 0 10px;
+            outline: none;
+            color: black;
+            background: none;
+            color: black;
+
+            +span {
+                width: 200px;
+
+                &::before {
+                    width: 2px;
+                    opacity: 0;
+                    transition: all .25s ease-in;
+                }
+            }
+        }
+
+        +span {
+            z-index: -1;
+            position: absolute;
+            border: 2px solid #F8EDE3;
+            top: 0;
+            width: 25px;
+            height: 25px;
+            transition: all .25s ease-in .25s;
+            border-radius: 25px;
+            left: 0;
+
+            &::before {
+                transition: all .25s ease-in .5s;
+                transform-origin: left top;
+                content: '';
+                position: absolute;
+                width: 10px;
+                height: 5px;
+                border-radius: 5px;
+                background: #F8EDE3;
+                transform: rotate(45deg) translate(26px, -2px);
+            }
+        }
+    }
+}
+
+
+
+/* Logo nav */
+
+.logo {
+    padding: 0px;
+}
+
+/* nav */
+
+nav {
+    position: relative;
+
+}
+
+/* Itens navbar esquerda */
+
+.navbar-itens {
+    list-style: none;
+    position: absolute;
+    display: inline-block;
+    height: 80px;
+    line-height: 80px;
+    margin: 0;
+    left: 0;
+}
+
+/* Itens navbar direita */
+
+.items-right {
+    list-style: none;
+    position: absolute;
+    display: inline-block;
+    height: 80px;
+    line-height: 80px;
+    margin: 0;
+    right: 100px;
+}
+
+.items-right2 {
+    list-style: none;
+    position: absolute;
+    display: inline-block;
+    height: 80px;
+    line-height: 80px;
+    margin: 0;
+    right: 250px;
+}
+
+/* icones navbar */
+
+.img-right {
+    list-style: none;
+    position: absolute;
+    display: inline-block;
+    margin: 0;
+    right: 50px;
+    top: 20px;
+}
+
+.img-right2 {
+    list-style: none;
+    position: absolute;
+    display: inline-block;
+    margin: 0;
+    right: 0;
+    top: 20px;
+}
+.img-right3 {
+    list-style: none;
+    position: absolute;
+    display: none;
+    margin: 0;
+    right: 0;
+    top: 20px;
+}
+
+.img-right li:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.img-right2 li:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+/* Configurações itens navbar */
+
+.navbar-itens li {
+    display: inline-block;
+    text-transform: uppercase;
+    margin-right: 25px;
+
+}
+
+.navbar-itens li:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.navbar-itens li a {
+    color: #F8EDE3;
+    text-decoration: none;
+    transition: .5s;
+}
+
+
+.navbar-itens li a:hover {
+    color: #DFD3C3;
+}
+
+.default-btn {
+    padding: 15px 20px;
+    background-color: #8D493A;
+    border-radius: 5px;
+    color: #8D493A;
+}
+
+.items-right li {
+    display: inline-block;
+    text-transform: uppercase;
+
+}
+
+.items-right li a {
+    color: #F8EDE3;
+    text-decoration: none;
+    transition: .5s;
+
+}
+
+.items-right li:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.items-right li a:hover {
+    color: #DFD3C3;
+}
+
+.items-right2 li {
+    display: inline-block;
+    text-transform: uppercase;
+
+}
+
+.items-right2 li a {
+    color: #F8EDE3;
+    text-decoration: none;
+    transition: .5s;
+
+}
+
+.items-right2 li:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.items-right2 li a:hover {
+    color: #DFD3C3;
+}
+
+.btn-right {
+    padding: 10px 15px;
+    background-color: #8D493A;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.btn-right2 {
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: #8D493A;
+
+}
+
+.btn-right:hover {
+    background-color: #814032;
+
+}
+
+
+
+
+/* foto promoção */
+
+.foto-promocao {
+    margin-top: 80px;
+    display: block;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+/* Container Geral */
+
+.container {
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+/* Cards Categorias */
+
+.card {
+    display: inline-block;
+    width: 200px;
+    margin-left: 50px;
+    margin-top: 30px;
+
+}
+
+/* Configurações Cards Categorias */
+
+.card:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+
+}
+
+.card-image {
+    height: 200px;
+    background-size: cover;
+    border-radius: 50%;
+    border: 1px solid #8D493A;
+}
+
+.card-1 .card-image {
+    background-image: url("../mulher.jpg");
+    cursor: pointer;
+}
+
+.card-2 .card-image {
+    background-image: url("../homem.jpg");
+    cursor: pointer;
+}
+
+.card-3 .card-image {
+    background-image: url("../kids.jpg");
+    cursor: pointer;
+}
+
+.card-4 .card-image {
+    background-image: url("../acessorio.jpg");
+    cursor: pointer;
+}
+
+.card-description {
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+
+/* box Superofertas  */
+
+.super-ofertas {
+    margin-top: 50px;
+    height: 850px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10%;
+    background: linear-gradient(to bottom left, #DFD3C3, #8D493A);
+
+}
+
+/* Cards da Super ofertas */
+
+.card-ofertas {
+    display: inline-block;
+    margin-left: 30px;
+    margin-top: 20px;
+    border: 1px solid #8D493A;
+    border-radius: 5%;
+
+}
+
+/* Configurações cards ofertas */
+
+.card-ofertas:hover {
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 16px 30px;
+    transform: scale(1.1);
+    transition: 0.3s;
+
+}
+
+
+.oferta-image {
+    height: 300px;
+    background-size: cover;
+
+}
+
+.card-ofertas img {
+    height: 100%;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+}
+
+#super {
+    margin-top: 20px;
+}
+
+.descricao {
+    color: #312f2f;
+    font-size: 14px;
+}
+
+.oferta-description {
+    text-align: left;
+    font-size: 16px;
+    font-weight: bolder;
+    margin-top: 5px;
+    margin-left: 5px;
+    color: #ad3413;
+
+}
+
+/* footer - Rodapé */
+
+.rodape {
+    background-color: #DFD3C3;
+    color: white;
+    height: auto;
+    width: 100%;
+    font-size: 14px;
+    font-family: helvetica;
+    margin-top: 150px;
+}
+
+.footer-img {
+    margin-top: 0;
+    padding: 0;
+}
+
+.rodape a {
+    text-decoration: none;
+    color: #F8EDE3;
+}
+
+.rodape a:hover {
+    color: #DFD3C3;
+    transition: 0.5s;
+}
+
+.rodape p {
+    color: #F8EDE3;
+    font-size: 20px;
+}
+
+.rodape-div {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+    align-items: stretch;
+    padding: 50px 10px 40px 10px;
+}
+
+
+
+.rodape-div-2,
+.rodape-div-3,
+.rodape-div-4 {
+    display: flex;
+    width: calc(100% / 4 - 20px);
+    padding: 0px;
+}
+.rodape-div-1{
+    display: flex;
+    width: calc(100% / 4 - 20px);
+    padding: 0px;
+    margin-top: 100px;
+}
+
+.rodape span {
+    font-size: 26px;
+    color: #616060;
+}
+
+.rodape-direitos {
+    width: calc(100% - 20px);
+    background-color: #D0B8A8;
+    padding: 10px;
+    margin: 0px;
+    text-align: center;
+}
+
+/* logo rodape */
+
+.logo-rodape{
+    margin-top: 90px;
+    margin-bottom: -310px;
+    position: relative;
+    align-items: center;
+}
+
+
+
+
+
+/* MediaQuery */
+
+/*mobile*/
+
+@media (max-width: 1020px) {
+
+    .rodape-div-1,
+    .rodape-div-2,
+    .rodape-div-3,
+    .rodape-div-4 {
+        width: calc(50% - 20px);
+        padding: 10px;
+    }
+
+    .rodape-div {
+        padding: 60px 0px 40px 0px;
+    }
+}
+
+/* Extra small devices */
+
+@media (max-width: 575px) {
+    .navbar-itens {
+        display: none;
+    }
+
+    .container-search {
+        display: none;
+    }
+
+    .img-right {
+        display: none;
+
+    }
+
+    .img-right2 {
+        display: none;
+    }
+    .img-right3 {
+        display: inline-block;
+    }
+    
+
+    .items-right {
+        display: none;
+    }
+
+    .items-right2 {
+        display: none;
+    }
+
+    .super-ofertas {
+        margin-top: 50px;
+        height: 3000px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 5%;
+        background: linear-gradient(to bottom left, #DFD3C3, #8D493A);
+    }
+}
+
+/* Small devices  */
+
+@media (min-width: 576px) and (max-width: 755px) {
+    .navbar-itens {
+        display: none;
+    }
+
+    .container-search {
+        display: none;
+    }
+
+    .img-right {
+        display: none;
+
+    }
+
+    .img-right2 {
+        display: none;
+    }
+
+    .items-right {
+        display: none;
+    }
+
+    .items-right2 {
+        display: none;
+    }
+
+    .super-ofertas {
+        margin-top: 50px;
+        height: 1550px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 5%;
+        background: linear-gradient(to bottom left, #DFD3C3, #8D493A);
+    }
+
+    .img-right3 {
+        display: inline-block;
+    }
+    
+
+}
+
+/* Medium devices */
+
+@media (min-width: 756px) and (max-width: 866px) {
+    .super-ofertas {
+        margin-top: 50px;
+        height: 1550px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 5%;
+        background: linear-gradient(to bottom left, #DFD3C3, #8D493A);
+    }
+
+    .card-ofertas {
+        display: inline-block;
+        margin-left: 20px;
+        margin-top: 20px;
+        border: 1px solid #a5815c;
+        border-radius: 5%;
+
+    }
+
+    .navbar-itens {
+        display: none;
+    }
+
+    .container-search {
+        display: none;
+    }
+}
+
+/* Large devices */
+
+@media (min-width: 866px) and (max-width: 1160px) {
+    .super-ofertas {
+        margin-top: 50px;
+        height: 1200px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 5%;
+        background: linear-gradient(to bottom left, #DFD3C3, #8D493A);
+    }
+
+    .navbar-itens {
+        font-size: 16px;
+    }
+
+    .items-right {
+        font-size: 16px;
+    }
+
+    .container-search {
+        display: none;
+    }
+}
+
+/* Extra large devices */
+
+@media (min-width: 2316px) {
+    .super-ofertas {
+        margin-top: 50px;
+        height: 540px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 5%;
+        background: linear-gradient(to bottom left, #DFD3C3, #8D493A);
+    }
+
+    .navbar-itens {
+        font-size: 20px;
+    }
+
+    .items-right {
+        font-size: 20px;
+    }
+
+    .items-right2 {
+        right: 270px;
+        font-size: 20px;
+    }
+
+    .container-search {
+        position: absolute;
+        right: 390px;
+        top: 25px;
+        transform: translate(0%);
+    }
+}
